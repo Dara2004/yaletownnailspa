@@ -1,0 +1,201 @@
+<!doctype html>
+
+<html ng-app="yaletownNails">
+
+<head>
+    <title>Yaletown Nails Spa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+
+    <!--instagram instafeed-->
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+        var userFeed = new Instafeed({
+            get: 'user',
+            userId: '1362124742',
+            accessToken: '1362124742.3ad74ca.6df307b8ac184c2d830f6bd7c2ac5644',
+            //            template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+            limit: 4
+        });
+        userFeed.run();
+        console.log(userFeed);
+
+    </script>
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <!-- nav -->
+    <div id="navigation">
+
+        <div class="row">
+            <div class="col-md-5">
+                <h1 id="logo"><a href="/">YaleTown<br>Nails Spa</a></h1>
+            </div>
+
+            <div class="col-md-7">
+                <!--hamburger menu-->
+                <ul id="nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </div>
+            <!--            <div class="col-md-1">-->
+            <div id="hamburger" class="container" onclick="toggleHamburger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!--        </div>-->
+
+        </div>
+    </div>
+
+    <div class="content">
+        <!--  banner  -->
+        <div class="slideshow-container">
+            <div id="slide1" class="mySlides fade">
+                <div class="banner" style="top:35%">Put it to neutral colors<br>Aloha for summer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="banner" style="top:35%">A break for you and them<br>$42 mani and pedi combo</div>
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="banner" style="top:25%">Let your beauty shine with shellac<br><br>Only $15 extra for a manicure shellac<br>$20 extra for a pedicure shellac</div>
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="banner" style="top:25%">Stay long, stay strong<br>with acrylic or gel builder (hard gel)<br><br>only $36 for a basic new set</div>
+                <div class="text"></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div id="dots" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+        <br>
+
+
+
+        <!--  banner end  -->
+
+        <!--  thumbnail images  -->
+        <div class="middle">
+            <div class="thumbnail">
+                <h1>A place for beauty & relaxation</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/sweet-summer.jpg">
+
+                        <h2>Nail Art</h2>
+                        <p>We are popular for<br>our skilled staff who<br>can create any nail design</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/manicure.jpg">
+
+                        <h2>Hygiene</h2>
+
+                        <a name="contact">
+                            <p>We keep our salon<br>clean and use<br>disposable tools</p>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/pedicure.jpg">
+                        <h2>Group Booking</h2>
+                        <p>Accommodate all group<br>bookings, from girls'<br>night outs to weddings</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--    contact    -->
+            <div class="contact">
+                <h1>Contact us</h1>
+                <h1 id="phone">Call 604 - 568 - 2666</h1>
+                <p>* A $40 deposit is required upon booking for groups over 4 people.<br>Please call to cancel 24 hours before your appointment to receive your deposit back.</p>
+
+            </div>
+        </div>
+
+        <!--  instagram booth  -->
+        <div id="instagram">
+            <div id="instafeed"></div>
+        </div>
+
+        <!--  form  -->
+        <div id="form" class="row">
+            <div class="col-md-4">
+                <div id="giftcard">
+                    <h1 id="gift">Gift Cards</h1>
+                    <img src="images/electronic-gift-card_grande.jpg">
+                    <p>Available to purchase in store</p>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div id="subscribe">
+                    <div id="content">
+                        <h2>Sign up to receive special offers</h2>
+                        <form post>
+                            <div class="form-group">
+                                <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                                <label style="text-align:left">Name</label><br>
+                                <input type="text" class="form-control input-lg text-center" ng-model="formData.name">
+                                <br>
+                                <label style="text-align:left">Email</label><br>
+                                <input type="text" class="form-control input-lg text-center" ng-model="formData.email">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg" ng-click="addSubs()">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--   footer -->
+        <div class="footer">
+            <div class="row">
+                <div id="address" class="col-md-3">
+                    <h3>Address</h3>
+                    <p>1260 Hamilton Street<br>Vancouver<br>V6B 2S8</p>
+                </div>
+
+                <div id="hours" class="col-md-6">
+                    <h3>Open hours</h3>
+                    <p>Monday to Saturday: 10:00AM - 7:00PM<br>Sunday and Holiday: 11:00AM - 6:00PM</p>
+                </div>
+
+                <div id="socials" class="col-md-3">
+                    <a href="mailto:yaletownnailspa@gmail.com?Subject=Hello%20Yaletown Nails Spa" target="_top"><img src="images/icons/closed-envelope-circle.png" class="media"></a>
+                    <a href="https://www.instagram.com/yaletownnailspa/"><img src="images/icons/instagram-logo.png" class="media"></a>
+                    <a href="https://www.facebook.com/yaletown.nailsspa.7?hc_ref=SEARCH&fref=nf"><img src="images/icons/facebook-logo-button.png" class="media"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/services/subscribers.js"></script>
+</body>
+
+</html>

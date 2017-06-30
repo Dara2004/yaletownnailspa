@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html ng-app="yaletownNails">
+
+<head>
+    <title>Yaletown Nails Spa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+    <!-- nav -->
+    <!-- nav -->
+    <div id="navigation">
+
+        <div class="row">
+            <div class="col-md-5">
+                <h1 id="logo"><a href="/">YaleTown<br>Nails Spa</a></h1>
+            </div>
+
+            <div class="col-md-7">
+                <!--hamburger menu-->
+                <ul id="nav">
+                    <li><a href="/">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!--            <div class="col-md-1">-->
+            <div id="hamburger" class="container" onclick="toggleHamburger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!--        </div>-->
+
+        </div>
+    </div>
+
+
+    <div class="content">
+        <!--  banner  -->
+        <div class="slideshow-container">
+            <div class="banner" style="top:48%">Our Services</div>
+        </div>
+
+        <!-- services menu  -->
+        <dl id="services">
+            <h1>Nail Care</h1>
+            <div class="row">
+                <div id="left-col" class="col-md-6">
+                    <dt class="left-description">Macnicure<span class="left-price">19</span></dt>
+                    <dt class="left-description">Pedicure<span class="left-price">31</span></dt>
+                    <dt class="left-description">Combo Mani & Pedi<span class="left-price">42</span></dt>
+
+                </div>
+                <div id="right-col" class="col-md-6">
+                    <dt class="right-description">Add-on services</dt>
+                    <dt class="right-description">Frech<span class="right-price">10</span></dt>
+                    <dt class="right-description">Nail cut Hand/Feet<span class="right-price">9/10</span></dt>
+                </div>
+            </div>
+            <dt></dt>
+            <h1>Shellac - Gel Color</h1>
+            <div class="row">
+                <div class="col-md-6">
+
+
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <h1>En Vogue UV Gel Extension</h1>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+            </div>
+            <h1>Solar Acrylic Extensions</h1>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+            </div>
+            <h1>Waxing</h1>
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+            </div>
+        </dl>
+        <img src="images/YNS-menu.png">
+    </div>
+
+    <!--   footer -->
+    <div class="footer">
+        <div class="row">
+            <div id="address" class="col-md-3">
+                <h3>Address</h3>
+                <p>1260 Hamilton Street<br>Vancouver<br>V6B 2S8</p>
+            </div>
+
+            <div id="hours" class="col-md-6">
+                <h3>Open hours</h3>
+                <p>Monday to Saturday: 10:00AM - 7:00PM<br>Sunday and Holiday: 11:00AM - 6:00PM</p>
+            </div>
+
+            <div id="socials" class="col-md-3">
+                <a href="mailto:yaletownnailspa@gmail.com?Subject=Hello%20Yaletown Nails Spa" target="_top"><img src="images/icons/closed-envelope-circle.png" class="media"></a>
+                <a href="https://www.instagram.com/yaletownnailspa/"><img src="images/icons/instagram-logo.png" class="media"></a>
+                <a href="https://www.facebook.com/yaletown.nailsspa.7?hc_ref=SEARCH&fref=nf"><img src="images/icons/facebook-logo-button.png" class="media"></a>
+            </div>
+
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/services/subscribers.js"></script>
+</body>
+
+</html>
